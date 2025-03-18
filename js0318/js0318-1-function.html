@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立打招呼函式，須以小駝峯命名(第二英文字開始開頭大寫)
+        function sayHi(name) {
+            document.write(`HiHi ${name}<br>`)
+        }
+        //呼叫單一參數的函式
+        sayHi("小美");
+        document.write('要吃午餐囉<br>')
+        sayHi('小帥')
+
+         //設計一個兩數相加的運算，使用函式，這樣就可以隨時變換n1 and n2
+         function add(a1,a2){   //必須英文字母開頭
+            console.log(`${a1}+${a2}=${a1+a2}`);
+         }
+         //數入任意數字
+         let a1=Number(window.prompt("請輸入任意數字1"))
+         let a2=Number(window.prompt("請輸入任意數字2"))
+         if (isNaN(a1) || isNaN(a2)){          
+            console.log(a1=0)
+            console.log(a2=0)
+         }
+         add(a1,a2)
+
+
+         //請輸入任意兩值與加減乘除計算出結果
+         //使用函式算出結果
+         
+    </script>
+</body>
+
+</html>

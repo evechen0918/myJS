@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //寫出跳出視窗
+        //設定while範圍(0-100)，直到輸入-1結束，且無效數字不可列入次數
+        //設定及格定義、不及格定義
+        let n=0 //輸入成績
+        let s=0 //全班總分
+        let pass=0 //及格人數
+        let fail=0 //不及格人數
+        let a=0
+        while(true){
+            n=prompt("請輸入成績")
+            if (n==-1) break;  //結束循環
+            if (n > 0 && n <=100){ //檢查是否在有效範圍內
+                console.log(n)
+                if(n>=60){
+                    pass++
+                }if(n<60){
+                    fail++
+                }
+                s=s+Number(n);
+                a=a+1;
+            }else{
+                alert("請輸入有效範圍內的數字!");
+            }
+        }
+
+        document.write(`及格人數${pass}<br>`)
+        document.write(`不及格人數${fail}<br>`)
+        document.write(`全班總分${s}<br>`)
+        document.write(`全班平均(${s/a})`)
+    </script>
+</body>
+</html>

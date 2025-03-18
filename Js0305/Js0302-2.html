@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 純文字型態''
+        console.log('eve'); //文字型態 
+        console.log('123'); //文字型態
+
+        //數字型態
+        console.log(1+1);   //沒有''是數值級別=1+1會自動=。但沒有就會是字串
+
+        console.log('53');  //53
+        console.log('5'+3+2);   //532   
+        console.log('5'+(3+2)); //55
+
+        //布林值true or false
+        console.log(90>=60);    //true
+
+
+        //四則運算-宣告var(同個文字數字一起更換)
+        var x=10;
+        var y=3;
+        var num=x/y;
+        console.log(x+y);   //15    
+        console.log(x-y);   //5
+        console.log(x*y);   //50
+        console.log(num);   //2
+        //${}顯示算式過程，使用反引號`運算式或是變數
+        console.log(`${x}+${y}=${x+y}`);    //10+5=15
+        console.log(`${x}-${y}=${x-y}`);   //10-5=5   
+        console.log(`${x}*${y}=${x*y}`);   //10*5=50
+        console.log(`${x}/${y}=${num}`);   //10/5=2
+
+        //小數點後第二位
+        console.log(`${x}/${y}=${num.toFixed(2)}`); //2.00
+        //小數點整數
+        console.log(`${x}/${y}=${num.toFixed(0)}`);   //2
+        //取餘數值％
+        console.log(`${x}%${y}=${x%y}`) //10/3=3.111(餘數)
+
+
+
+        //運算子(遞增遞減)
+        var a=1
+        a=a+50; //左方為右方的相加
+        console.log(a)  //51
+        a++;    //a++ or a=a+1
+        console.log(a)
+        a--;    //a-- or a=a-1
+        console.log(a)
+        //練習
+        var x=1;
+        var y=2;
+        console.log(`${x}+${y}=${x+y}`);
+
+    </script>
+</body>
+</html>

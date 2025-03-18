@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for迴圈，執行已知次數>>>>for(從哪個數字開始; 是否滿足條件; 再次執行)共有三個條件
+        console.log(`設定5-1`)
+        for(let i=1;i<=5;i++){
+            console.log(i);
+        }
+
+        console.log(`設定5-1`)
+        for(let i=5; i>=1; i--){
+            console.log(i)
+        }
+        
+        console.log(`設定橫向1,2,3,4,5`)
+        let star1="" //只是要告訴電腦要有一個空間存放一個字串，因為目前沒有，所以先打“”
+        for(let i=1; i<=5; i++){
+            if(i!=5){
+                star1=star1+i+","   //star1=star1+1有重複故可以寫成
+            }else{                    //star1=star1+"," or star1+=","
+                star1=star1+i
+            }
+        }
+        console.log(star1)
+
+        console.log(`設定橫向1,2,3,4,5簡單版`)
+        
+        let star1="" 
+        for(let i=1; i<=5; i++){
+            if(i!=5){
+                star1+=","
+            }
+        }
+        console.log(star1)
+
+    </script>
+</body>
+</html>

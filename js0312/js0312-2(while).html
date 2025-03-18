@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //定義「break強迫迴圈停止中斷」
+        //題目二：1-100中5的倍數和
+        let n = 1;//從一開始的意思
+        let s = 0;
+        while (n <= 100) {
+            if (n % 5 == 0) {
+                s = s + n
+                //當合計得值>500停止迴圈，並顯示n的值
+                if (s > 500) {
+                    console.log(`當S合計>500時，停止迴圈並顯示n的數值 n=${n}`)
+                    break; //結束迴圈
+                }
+            }
+            n = n + 1
+        }
+        console.log(`1-100的加總為s=${s}`)
+
+
+        //題目三：找出1-20中5的倍數，並使用迴圈配continue(忽略這一次)
+        //方法一：
+        let n1 = 1
+        while (n1 <= 20) {
+            if (n1 % 5 != 0) { //當5的餘數不等於0時，就強制忽略
+                n1 = n1 + 1
+                continue;
+            }
+            //印出n
+            console.log(n1)
+            n1 = n1 + 1
+        }
+        //方法二：
+        let n2 = 0
+        while (n2 <= 20) {
+            n2 = n2 + 1
+            if (n2 % 5 != 0) {
+                continue;
+            }
+            console.log(n2)
+        }
+
+    </script>
+</body>
+
+</html>

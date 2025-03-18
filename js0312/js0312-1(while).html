@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //定義：迴圈while(執行迴圈的條件要控制(例如加上n++)否則會有無窮迴圈=無法結束執行無回應)
+
+        //題目一：列出1-5
+        let n1=0;
+        while(n1<5){
+             n1=n1+1; //n1+1 = n1++
+             console.log(n1);
+        }
+
+        //題目二：印出1-10的奇數，使用while迴圈
+        let n = 1
+        let s = 0     //s=加總總和      
+        while (n <= 10) {   // 當數子<=10的時候，可以進入
+            if (n % 2 == 1) {  //如果n除以2的餘數(%)等於(==)1
+                //印出奇數
+                console.log(n) //可以被顯示出來
+                //加總奇數(累積)
+                s = s + n //加總總和等於0，會不停累積
+
+                /*
+                n=1 =>s=s+n=0+1=1
+                n=2 不是奇數不會跑
+                n=3 =>s=s+n=1+3=4
+                */
+            }
+            n = n + 1;   //將答案加+1否則會一直停留在同一個數字，Ex:重複1一直循環
+        }
+        console.log(`1-10的奇數總和是${s}`)
+
+
+    </script>
+</body>
+
+</html>

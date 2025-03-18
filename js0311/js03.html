@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //BMI計算，是否是在正常過程
+        // var h=1.76;
+        // var w=73;
+        // var num=h*h
+        // var bmi=w/num
+        // console.log(`${h}*${h}=${num}`); 
+        // console.log(w/num);
+
+        // if(bmi<="24" && "18.5"){
+        //     console.log("恭喜你體重正常")
+        // else if (bmi=="18.5"){
+        //     console.log("太瘦囉")
+        // }
+            
+        // else if 
+        // }else{
+        //     console.log("太重囉")
+        // }
+
+        //老師做法
+        var h=176
+        var w=58
+        //第一步：算出BMI
+        var bmi=w/((h/100)*(h/100));
+        //var bmi=w/Math.pow(h/100,2);也可以這樣寫
+        //第二步：顯示落在哪個區間
+        var mag=""
+        if (bmi<18.5){
+            msg="太瘦囉"
+        }else if (bmi>=18.5 && bmi<24){
+            msg="體重正常";
+        }else if (bmi>24 && bmi<27){
+            msg="體重過重";
+        }else if (bmi>27){
+            msg="肥胖";
+        }
+        //顯示結果
+        console.log(`身高${h}公分 體重${w}公斤 BMI${bmi.toFixed(1)} ${msg}`)
+
+        
+        //0311回家練習
+        //算出BMI
+        var h=166
+        var w=58
+        var bmi=w/((h/100)*(h/100))
+        //顯示在哪個區間
+        if(bmi<18.5){
+            msg:"太瘦囉"
+        }else if (bmi>=18.5 && bmi<24){
+            msg:"體重正常"
+        }else if (bmi>24 && bmi<27){
+            msg="體重過重"
+        }else if (bmi>27){
+            msg="肥胖"
+        }
+        //得出結果
+        console.log(`身高${h}公分 體重${w}公斤 BMI${bmi.toFixed(1)} ${msg}`)
+    </script>
+</body>
+</html>

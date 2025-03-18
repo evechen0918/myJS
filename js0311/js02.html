@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //多層寫法if...else if...else
+        var blood = "ab".toUpperCase(); //使用者不一定會打AB ab Ab aB，可以先將值改為全都是大寫.touppercase
+
+        if (blood == "A") {
+            console.log("A型")
+        } else if (blood == "B") {
+            console.log("B型")
+        } else if (blood == "O") {
+            console.log("O型")
+        } else if (blood == "AB") {
+            console.log("AB型")
+        } else {
+            console.log('輸入血型錯誤')
+        }
+
+        //         var blood="ab" //後面加上or||的意思
+        //     if(blood=="A"||blood=="a"){
+        //         console.log("A型")
+        //     }else if(blood=="B"||blood=="b"){
+        //         console.log("B型")
+        //     }else if(blood=="O"||blood=="o"){
+        //         console.log("O型")
+        //     }else if(blood=="AB"||blood=="ab"){
+        //         console.log("AB型")
+        //     }else{
+        //         console.log('輸入血型錯誤')
+        // }
+        //星座寫法
+        var sign = "geminI".toLowerCase();
+
+        if (sign == "aries") {
+            console.log("牡羊座")
+        } else if (sign == "taurus") {
+            console.log("金牛座")
+        } else if (sign == "gemini") {
+            console.log("雙子座")
+        } else {
+            console.log("輸入星座錯誤")
+        }
+        //此為0311回家練習
+        var blood = "o".toUpperCase();
+        if (blood == "A") {
+            console.log("A型");
+        } else if (blood == "B") {
+            console.log("B型")
+        } else if (blood == "O") {
+            console.log("O型")
+        } else if (blood == "AB") {
+            console.log("AB型")
+        } else {
+            console.log("無效血型")
+        }
+    </script>
+</body>
+
+</html>

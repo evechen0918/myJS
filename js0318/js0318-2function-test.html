@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //請輸入任意兩值與加減乘除計算出結果
+        //使用函式算出結果
+        //數入任意數字及第三輸入加減乘除
+        let numb1 = Number(window.prompt("請輸入任意數字1"))
+        let numb2 = Number(window.prompt("請輸入任意數字2"))
+        let op = (window.prompt("請輸入加減乘除"))
+
+        function math(a1, a2, a3) {
+            let result;   //必須英文字母開頭，funtion和let雖然名字相同，但意義不同
+            if (a3 == "+") {
+                result = a1 + a2
+            }
+            if (a3 == "-") {
+                result = a1 - a2
+            }
+            if (a3 == "*") {
+                result = a1 * a2
+            }
+            if (a3 == "/") {
+                if (isFinite(a1 / a2))
+                    result = (a1 / a2).toFixed(2)
+            }
+            if (isNaN(a1) && isNaN(a2)) {
+                window.alert("請輸入有效數值")
+            }
+            console.log(`${a1}${a3}${a2}=${result}`)
+        }
+
+        math(numb1, numb2, op)  //呼叫上面的函數，啟用
+
+    </script>
+</body>
+
+</html>
