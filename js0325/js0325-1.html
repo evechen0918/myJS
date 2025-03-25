@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let strname=window.prompt("請輸入名稱")
+        //建立一格打招呼函式，方法一
+        function Hi(name) {
+            console.log(`${name}，午安安`);
+        }
+        //呼叫函式一
+        Hi(strname);
+        //－
+        //建立一格打招呼函式，方法二
+        let HiHi = function (name1) {
+            console.log(`${name1}，晚安安`)
+        }
+        //呼叫函式二
+        HiHi(strname);
+        /*
+        當函式處理完的結果，要在函式外使用，就要return回傳數值，不然function函數就結束了
+        function sayHi(){
+          let strname=window.prompt("請輸入名稱")
+            return strname;
+        }
+        let result=sayHi()
+        console.log(result)
+        */
+
+    </script>
+</body>
+
+</html>

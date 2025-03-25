@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //九九乘法表控制
+        let begin = 8;
+        let end = 9;
+
+        //檢查是否超出範圍
+        if (begin > 9 || begin < 1 || end > 9 || end < 1) {
+            alert("傳入值必須介於1-9");
+        } else {  //這邊學習交換資料，如果begin輸入的是5是大於3
+            if (begin > end) {
+                let tmp = begin //tmp暫存變數
+                begin = end;
+                end = tmp
+            }
+            for (let i = begin; i <= end; i++) {
+                fun2(i)
+            }
+        }
+
+        //生成九九乘法的列表
+        function fun2(i) {
+            for (let j = 1; j <= 9; j++) {
+                document.write(`${i}*${j}=`)
+                if (i * j < 10) {    //讓7變成07
+                    document.write("0")
+                }
+                document.write(`${i * j}`)
+                document.write("<br>")
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //九九乘法表，顯示1*1+01 1*2=02
+        /*
+        for (let i=1; i<=9; i++){
+            for(j=1; j<=9; j++){
+                if(i*j<10){
+                    document.write(`${i}*${j}=0${i*j}&nbsp;&nbsp;&nbsp;`);
+                }else{
+                    document.write(`${i}*${j}=${i*j}&nbsp;&nbsp;&nbsp;`);
+                }
+            }
+            document.write("<br>")
+        }
+        */
+        for (let i=1; i<=9; i++){
+            for(j=1; j<=9; j++){
+                document.write(`${i}*${j}=`)
+                if(i*j<10){
+                    document.write("0")
+                }
+                document.write(`${i*j}&nbsp;&nbsp;&nbsp`)
+            }
+            document.write("<br>")
+        }
+
+
+        document.write("<hr>");//水平線下方縱向顯示
+
+        for (let i=1; i<=9; i++){
+            for(j=1; j<=9; j++){
+                document.write(`${i}*${j}=`)
+                if(i*j<10){
+                    document.write("0")
+                }
+                document.write(`${i*j}&nbsp;&nbsp;&nbsp`)
+                document.write("<br>")
+            }
+        }
+        document.write("<hr>");
+
+    </script>
+</body>
+</html>
