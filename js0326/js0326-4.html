@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        //將「函式」當作「其他函式」的參數
+        //(一)將「函式」當作「其他函式」的參數
         function sayHi1(name){
             return function(){   //後面要加上小括號，因為是呼叫函式
                 console.log("Hi,"+name)
@@ -21,6 +21,8 @@
             }
         }
         sayHi2("Eve")(12)
+
+
     </script>
 </body>
 </html>

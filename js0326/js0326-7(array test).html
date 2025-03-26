@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //0326上課test，找出陣列中最大and最小值，請使用四個方法
+        let arr1 = [50, 88, 66, 100, 30, -1];
+        let max = arr1[0];//意思是從length第一位開始=50
+        let min = arr1[0];
+        //1.for寫法
+        for (let i = 1; i < arr1.length; i++) {
+            if (arr1[i] > max) {
+                max = arr1[i];  // 更新最大值
+            }
+            else if (arr1[i] < min) {
+                min = arr1[i];  // 更新最小值
+            }
+        }
+        document.write(`最大數字是:${max},最小值:${min}`);
+        document.write("<br>")
+        //2.for of寫法
+        for (let item of arr1) {
+            if (item > max) {
+                max = item;  // 更新最大值
+            }
+            else if (item < min) {
+                min = item;  // 更新最小值
+            }
+        }
+        document.write(`最大數字是:${max},最小值:${min}`);
+        document.write("<br>")
+        //3.forEach寫法
+        arr1.forEach((item)=> {
+            if (item > max) {
+                max = item;  // 更新最大值
+            }
+            else if (item < min) {
+                min = item;  // 更新最小值
+            }
+        })
+        document.write(`最大數字是:${max},最小值:${min}`);
+        document.write("<br>")
+
+        //4.Map寫法
+        arr1.map((item)=> {
+            if (item > max) {
+                max = item;  // 更新最大值
+            }
+            else if (item < min) {
+                min = item;  // 更新最小值
+            }
+        })
+        document.write(`最大數字是:${max},最小值:${min}`);
+    </script>
+</body>
+
+</html>

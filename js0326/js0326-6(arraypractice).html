@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Java</li>
+    </ul>
+    <hr>
+    <script>
+        //迴圈寫法
+        let arr1 = ["HTML", "CSS", "Javc"]
+        //1.for
+        document.write("<ul>");
+        for (let i = 0; i < arr1.length; i++) {
+            document.write(`<li>${arr1[i]}</li>`)
+        }
+        document.write("</ul>");
+        //2.for of寫法
+        document.write("<ul>");
+        for (let item of arr1) {
+            document.write(`<li>${item}</li>`)
+        }
+        document.write("</ul>")
+        //3.forEach寫法
+        document.write("<ul>");
+        arr1.forEach((item) => {
+            document.write(`<li>${item}</li>`)
+        })
+        document.write("</ul>")
+        //4.Map寫法
+        document.write("<ul>");
+        arr1.map((item) => {
+            document.write(`<li>${item}</li>`)
+        })
+        document.write("</ul>")
+    </script>
+
+
+</body>
+
+</html>

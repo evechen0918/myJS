@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //連續性相同資料可以使用陣列
+        /*變數資料
+        let subject1="HTML"
+        let subject2="CSS"
+        let subject3="JS"
+        */
+
+        //1.一直重複項目subjects很麻煩，所以改成以下             //大駝峰命行，第一個英文字即要大寫
+        let arrSubjects = ["HTML", "CSS", "JS", "React", "Vue"] //小駝峯命名，第二個定義的英文字母要大寫
+        //2-1.全部顯示
+        console.log(arrSubjects);
+        //2-2.要提出取得，故要提出陣列名稱[]
+        console.log(arrSubjects[3]);
+        //3-1.全部提取使用for迴圈寫出
+        for (let i = 0; i < arrSubjects.length; i++) {    //length意思是這個陣列的長度，不要固定一個數字，因為數沒有上限
+            console.log(arrSubjects[i])
+        }
+        //3-2.全部提取使用for(...of...)
+        for (let item of arrSubjects) {  //of後面是陣列名稱
+            console.log(item)
+        }
+        //3-3陣列名稱.forEach
+        arrSubjects.forEach((item) => {
+            console.log(item)
+        })
+        //3-4使用map
+        arrSubjects.map((item)=> {
+            console.log(item)
+        })
+
+    </script>
+</body>
+
+</html>
