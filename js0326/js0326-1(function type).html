@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //函式三種不同種類
+
+        //1.function關鍵字
+        function fun1() {
+            console.log("我是function關鍵字")
+        }
+        fun1();
+
+        function add1(n1,n2){
+            return n1+n2
+        }
+        console.log(add1(5,3))
+
+         //2.匿名函式
+        let fun2 = function () {
+            console.log("使用匿名函式")
+        }
+        fun2();
+
+        let add2=function(n1,n2){
+            return n1+n2
+        }
+        console.log(add2(5,3))
+
+        //3.箭頭函式
+        let fun3 = (n1,n2) => {
+            console.log("我是箭頭函式")
+        }
+        fun3();
+
+        let add3=(n1,n2)=>{
+            return n1+n2
+        }
+        console.log(add3(5,3))
+    </script>
+</body>
+
+</html>

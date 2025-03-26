@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //預設參數情形
+        //梯形面積計算，例如學生無填寫到高度，就直接給預設值
+        function trapezoid(top,botton,height){
+            let area=((top+botton)*height/2)
+            return area
+        }
+        console.log(trapezoid(10,20,10))
+        
+        //學生無填寫到高度，就直接給預設值
+        function trapezoid2(top,botton,height=5){
+            let area=((top+botton)*height/2)
+            return area
+        }
+        console.log(trapezoid2(10,20))
+    </script>
+</body>
+</html>

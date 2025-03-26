@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //(一)非具名參數vs.具名參數
+        //非具名參數寫法
+        function add1(n1, n2, n3) {
+            return n1 + n2 + n3
+        }
+        console.log(add1(5, 3, 8))
+
+        //具名參數寫法，直接指定，需添加大括弧{}
+        function add2({ n1, n2, n3 }) {
+            console.log(`n1=${n1}`);
+            console.log(`n2=${n2}`);
+            console.log(`n3=${n3}`);
+            return n1 + n2 + n3
+        }
+        console.log(add2({ n2: 5, n1: 3, n3: 8 }));
+
+        //(二)其餘參數(宣告函數時不限定參數)使用for(...of...)
+        function add3(...numbers) {
+            let tot = 0
+            for (var num of numbers) {
+                tot = tot + num;
+            }
+            return tot;
+        }
+        console.log(add3(5, 5))
+        console.log(add3(5, 5, -2))
+
+        //(三)回傳值超過兩個以上(正常只有一個)，使用陣列[]或物件{}
+        function addsub(n1, n2) {
+            let add = n1 + n2
+            let sub = n1 - n2
+            return [add, sub]
+        }
+        console.log(addsub(5, 3));
+        let result=addsub(5,3)
+        console.log(`兩數相加=${result[0]}`)
+        console.log(`兩數相減=${result[1]}`)
+
+    </script>
+</body>
+
+</html>

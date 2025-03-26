@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //將「函式」當作「其他函式」的參數
+        function sayHi1(name){
+            return function(){   //後面要加上小括號，因為是呼叫函式
+                console.log("Hi,"+name)
+            }
+        }
+        sayHi1("Eve")()
+
+        function sayHi2(name){
+            return function(ages){   
+                console.log(`${name}${ages}歲`)
+            }
+        }
+        sayHi2("Eve")(12)
+    </script>
+</body>
+</html>
