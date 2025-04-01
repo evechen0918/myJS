@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        請選擇喜歡的飲料：
+        <!-- value=“美式” 意思是被選取的內容，會和外面的文字打一樣-->
+
+        <!-- 1.使用name -->
+        <input type="checkbox" name="drinks" id="" value="美式">美式 <!-- 最外面的美式是消費者看到的 -->
+        <input type="checkbox" name="drinks" id="" value="拿鐵">拿鐵
+        <input type="checkbox" name="drinks" id="" value="紅茶">紅茶
+        <!-- 2.使用class -->
+        <input class=drinks2 type="checkbox" name="drinks2" id="" value="美式">美式 <!-- 最外面的美式是消費者看到的 -->
+        <input class=drinks2 type="checkbox" name="drinks2" id="" value="拿鐵">拿鐵
+        <input class=drinks2 type="checkbox" name="drinks2" id="" value="紅茶">紅茶
+    </form>
+
+    <script>
+        // 1-1.使用name屬性取得drinks的元素
+        let drinks=document.getElementsByName("drinks")
+        for(let i=0 ; i<drinks.length; i++){
+            console.log("getElementsByName="+drinks[i].value);   //選項的方法要使用value
+        }
+
+        //2-1.使用class
+        let drinks2=document.getElementsByClassName("drinks2")
+        for(let i=0 ; i<drinks.length; i++){
+            console.log("getElementsByClassName="+drinks2[i].value);   //選項的方法要使用value
+        }
+    </script>
+</body>
+</html>

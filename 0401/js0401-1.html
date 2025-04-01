@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>前端課程</h1>
+    <ul>
+        <li id="html">HTML</li>
+        <li id="css">CSS</li> <!-- 為了要控制css，所以要定義id=css -->
+        <li id="javascript">JavaScript</li>
+    </ul>
+    <script>
+        //1.取得id=css的標籤位置
+        let strCss = document.getElementById("css")
+        //2.取得標籤內容
+        console.log(strCss.innerHTML);
+        console.log(strCss.innerText);
+        console.log(strCss.textContent);
+
+        //3-1使用li標籤取得標籤內容
+        let subjects = document.getElementsByTagName("li");
+        //console.log(subjects);  //產生集合物件
+        //console.log(subjects[0].textContent);  
+        //console.log(subjects[1].textContent);
+        //console.log(subjects[2].textContent);
+        //3-2使用li標籤，並使用迴圈取得標籤內容
+        for (let i = 0; i < subjects.length; i++){  //將中間數值改為subjects.length意味正列有多少就跑多少
+            console.log(subjects[i].textContent);
+        }
+
+    </script>
+</body>
+
+</html>

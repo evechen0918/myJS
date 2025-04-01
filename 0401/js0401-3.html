@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="html" class="subjects">
+            <div>
+                <p>我是第一個li的div的段落</p>
+            </div>
+            <p id="p1">HTML</p>
+            <p>HTML5</p>
+        </li>
+        <li id="css" class="subjects">CSS</li>
+        <li id="js" class="subjects">JavaScript</li>
+    </ul>
+    <script>
+        //1.使用querySelector，取得p1內容
+        let p1 = document.querySelector("#p1")  //因為是id所以要添加＃
+        console.log(p1.textContent)
+
+        //2.取得li內容，因為li內容大於兩格，故使用querySelector「All」
+        let lis = document.querySelectorAll("li")
+        console.log(lis)
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[0].textContent)
+        }
+
+        //3.得到li的子元素
+        let p=document.querySelectorAll("li>p")
+        console.log(p)
+    </script>
+</body>
+
+</html>

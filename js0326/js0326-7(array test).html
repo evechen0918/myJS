@@ -36,7 +36,7 @@
         document.write(`最大數字是:${max},最小值:${min}`);
         document.write("<br>")
         //3.forEach寫法
-        arr1.forEach((item)=> {
+        arr1.forEach((item) => {
             if (item > max) {
                 max = item;  // 更新最大值
             }
@@ -48,7 +48,7 @@
         document.write("<br>")
 
         //4.Map寫法
-        arr1.map((item)=> {
+        arr1.map((item) => {
             if (item > max) {
                 max = item;  // 更新最大值
             }
@@ -57,6 +57,18 @@
             }
         })
         document.write(`最大數字是:${max},最小值:${min}`);
+        document.write("<br>")
+        //5.排序
+        arr1.sort((a, b)=> {
+            return a - b
+        });
+        document.write(`由小到大排序${arr1}`)
+        document.write("<br>")
+        //6.數學類別方法
+        let max1=Math.max(...arr1);
+        let min1=Math.max(...arr1);
+        document.write(`max=${max1},min=${min1}`)
+
     </script>
 </body>
 

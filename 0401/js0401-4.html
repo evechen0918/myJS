@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 檢查屬性，使用attribute -->
+    <a href="#" id="url">Google</a>
+    <button type="button" id="btn1">更改href屬性</button>
+    <button type="button" id="btn2">移除href屬性</button>
+    <script>
+        //1.取得「增加」href屬性按鈕
+        let btn1 = document.querySelector("#btn1");
+        //1-2.按下按鈕，將href的連結給google
+        btn1.addEventListener('click', () => {  //當按下btn1要去更改超連結屬性
+            //let url=document.getElementById("url") 這個方法也可以，不用打#因為前面已告知是id
+            let url = document.querySelector('#url'); //querySelector一定要打＃
+            console.log("舊的url=>" + url);
+            url.setAttribute("href", "https://www.google.com.tw/?hl=zh_TW"); //按下後更改了google屬性，變成可以超連結到google
+            console.log("新的url=>" + url);
+        })
+        //2-1.「清除」href屬性按鈕
+        let btn2 = document.querySelector("#btn2");
+        //2-2.按下按鈕，將href屬性清除
+        btn2.addEventListener('click', () => {
+            let url = document.querySelector('#url')
+            console.log("原本url=>" + url);
+            url.removeAttribute("href");
+            console.log("新的url=>" + url);
+        })
+    </script>
+</body>
+
+</html>
