@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 取得表單元素的值 -->
+    <form>
+        選修科目
+        <!-- 選項按鈕，目前是單選，因為name=subject都一樣 -->
+        <input type="radio" name="subject" value="html">HTML
+        <input type="radio" name="subject" value="css">CSS
+        <input type="radio" name="subject" value="js">Javascript
+
+        <input type="button" value="送出" id="btn1" onclick="chkRadio()">
+        <!-- 選擇結果 -->
+        <p id="result"></p>
+    </form>
+    <script>
+        function chkRadio() {
+            let str1 = "";  //存放被選取內容，目前是空的
+            let subjects = document.getElementsByName("subject");
+            //逐一檢查是否被選取>checked
+            for (let i=0; i < subjects.length; i++) {
+                if (subjects[i].checked) {    //如果項目中被選取
+                    str1 = subjects[i].value; //將項目的內容丟回
+                    break;  //因為是單選，故找到後就結束
+                }
+            }
+            //取得顯示結果的位置
+            let result = document.getElementById("result");
+            if (str1 == "") {
+                result.textContent = `沒有選擇科目`;
+                result.style.color="red"
+            } else {
+                result.textContent = `您選擇的科目為：${str1}`;
+                result.style.color="blue"
+            }
+        }
+    </script>
+</body>
+
+</html>
