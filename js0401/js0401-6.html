@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .errColor {
+            background-color: red;
+            color: aliceblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <!-- 帳號區，input使用text看得到 -->
+        <label for="uid">帳號</label>
+        <input type="text" id="uid">
+        <span id="uidMsg"></span><br>
+        <!-- 密碼區，input使用password看不到 -->
+        <label for="upw">密碼</label>
+        <input type="password" id="upw">
+        <span id="upwMsg"></span><br><br>
+        <input type="button" value="登入1" id="btn1">
+        <input type="button" value="登入2" onclick="chkData();">
+    </form>
+    <script>
+        //方法一：監聽事件
+        //1-1檢查帳號是否空白，取得帳號
+        let btn1 = document.querySelector("#btn1");
+        //1-2啟動監聽click事件
+        btn1.addEventListener("click", function () {
+            //1-3取得帳號位置
+            let uid = document.querySelector("#uid")
+            //1-4取得帳號訊息位置
+            let uidMsg = document.querySelector("#uidMsg")
+            if (uid.value == "") {
+                uidMsg.textContent = "帳號不能空白"
+                //更改行內CSS樣式
+                uidMsg.style.color = "red";
+            } else {
+                uidMsg.textContent = "";
+            }
+        })
+
+
+        //方法二：呼叫函式
+        function chkData() {
+            //1-1取得密碼位置
+            let upw = document.querySelector("#upw")
+            //1-2取得密碼訊息位置
+            let upwMsg = document.querySelector("#upwMsg")
+            if (upw.value == "") {
+                upwMsg.textContent = "密碼不能空白"
+                //使用CSS2定義規則
+                upwMsg.className = "errColor"
+            } else {
+                upwMsg.textContent = "";
+                upwMsg.removeAttribute("class");  //移除屬性
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 將輸入的字母都變成大寫 */
+        #span1 {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顯示結果區 -->
+    <!-- p#msg可自動生成<p id="msg"></p> -->
+    <div id="msg">
+        <span id="span1">Hello</span>
+        <span style="display: none">我是看不見的內容</span>
+    </div>
+    <!--textContent and innerText差異   and innerHtml-->
+    <!-- 回傳全部內容 and 回傳有CSS屬性內容 and 回傳html-->
+    <h3>使用textContentOutput屬性的結果</h3>
+    <textarea id="textContentOutput" rows="8" cols="70"></textarea>
+    <h3>使用innerTextOutput屬性的結果</h3>
+    <textarea id="innerTextOutput" rows="8" cols="70"></textarea>
+    <h3>使用innerHtmlOutput屬性的結果</h3>
+    <textarea id="innerHtmlOutput" rows="8" cols="70"></textarea>
+
+    <script>
+        let msg = document.querySelector("#msg")
+        let textContentOutput = document.querySelector("#textContentOutput")
+        let innerTextOutput = document.querySelector("#innerTextOutput")
+        let innerHtmlOutput = document.querySelector("#innerHtmlOutput")
+        textContentOutput.value = msg.textContent;
+        innerTextOutput.value = msg.innerText;
+        innerHtmlOutput.value = msg.innerHTML;
+
+    </script>
+
+
+    <!-- 呼叫事件函式1一 -->
+    <button type="button" id="btn1" onclick="showMsg();">輸入任意字1</button>
+    <script>
+        function showMsg() {
+            //1.輸入資料
+            let strMsg = prompt("輸入任意字1")
+            //2.取得顯示內容位置
+            let msg = document.querySelector("#msg")
+            //3.顯示內容到msg
+            msg.textContent = `您輸入的值為${strMsg}`
+        }
+    </script>
+    <!-- 呼叫事件函式2 -->
+    <button type="button" id="btn2">輸入任意字2</button>
+    <script>
+        let btn2 = document.querySelector("#btn2")
+        btn2.addEventListener("click", function () {
+            //1.輸入資料
+            let strMsg = prompt("輸入任意字2")
+            //2.取得顯示內容位置
+            let msg = document.querySelector("#msg")
+            //3.顯示內容到msg
+            msg.textContent = `您輸入的值為${strMsg}`
+        })
+    </script>
+</body>
+
+</html>
