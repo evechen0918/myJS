@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 取得核取方塊 -->
+    <form>
+        選修科目
+        <input type="checkbox" name="subject" id="" value="html">HTML
+        <input type="checkbox" name="subject" id="" value="css">CSS
+        <input type="checkbox" name="subject" id="" value="js">JavaScript
+        <input type="checkbox" name="subject" id="" value="react">React
+        <!-- 標籤綁定事件 -->
+        <input type="button" value="送出1" id="btn1" onclick="chkData()">
+        <!-- 監聽事件 -->
+        <input type="button" value="送出2" id="btn2">
+    </form>
+    <script>
+        //標籤綁定事件
+        function chkData() {
+            let result = [];
+            //1.選修科目
+            let subjects = document.getElementsByName("subject");
+            //2.逐一檢查是否被選=>checked
+            for (let i = 0; i < subjects.length; i++) {
+                if (subjects[i].checked) {
+                    result.push(subjects[i].value)  //push()動態增加陣列值
+                }
+            }
+            console.log(`選修科目1${result}`)
+        }
+
+        //監聽事件
+        //let.btn2=document.getElementByID(btn2);
+        let btn2 = document.querySelector("#btn2");
+        btn2.addEventListener("click",()=>{
+            let result = [];
+            //1.選修科目
+            let subjects = document.getElementsByName("subject");
+            //2.逐一檢查是否被選=>checked
+            for (let i = 0; i < subjects.length; i++) {
+                if (subjects[i].checked) {
+                    result.push(subjects[i].value)  //push()動態增加陣列值
+                }
+            }
+            console.log(`選修科目2${result}`)
+        })
+    </script>
+</body>
+
+</html>
